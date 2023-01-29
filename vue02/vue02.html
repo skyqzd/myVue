@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="importmap">
+      {
+        "imports": {
+          "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+        }
+      }
+    </script>
+</head>
+<body>
+   <div id="app" type="module">
+         <butoon>{{message}}</butoon>
+   </div>
+    <script  type="module">
+       
+      // 当在未采用构建流程的情况下使用 Vue 时，我们可以在挂载容器中直接书写根组件模板：
+       
+      import{createApp} from 'vue'
+      const app=  createApp({
+        data() {
+          return {
+            message:'ok'
+          }
+        }
+      })
+      //还可以拿到里面的值
+   const vm=   app.mount('#app')
+       console.log(vm.message);
+       
+       //ok
+       </script>
+        
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="importmap">
+        {
+            "imports":{
+                "vue":"https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+            }
+        }
+    </script>
+    <style>
+        button{
+                 height: 50px;
+                 width: 50px;
+        }
+    </style>
+</head>
+<body>
+  <!--   最基本的数据绑定形式{{}} -->
+    <div type="module" id="app">
+        <button @click="count++">{{count}}</button>
+    </div>
+         
+
+    <script type="module">
+
+        import {createApp} from 'vue'
+                   const app =createApp({
+                    data(){
+                        return{
+                            count:0
+                        }
+                    }
+                   })
+                   app.mount('#app')
+     app.config.errorHandler=(err)=>{
+               
+     }
+
+
+       /* 
+       应用实例并不止有一个 可以创建多个应用
+       
+       const app2= createApp({
+               data(){
+                    return{
+
+                    }
+               }
+       })
+
+         app3.mount()
+      const app3=createApp({
+        data(){
+            return{
+
+            }
+        }
+      })
+app3.mount()
+ */
+    </script>
+</body>
+</html>
