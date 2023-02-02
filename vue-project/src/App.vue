@@ -1,34 +1,18 @@
 <script>
-import Content2 from './components/Content2.vue'
 
-export default{
-    data(){//让每一个组件对象都返回一个新的对象，不会造成数据污染(不会互相影响)
-        return{
-          message:'',
-        }
-    },
-components:{
-    Content2
-},
-methods:{
-    getChildMsg:function(value){
-         console.log(value);
-         // 应用拿过来的值this.message=value
-    }
-}
-
-}
 </script>
 <template>
-
-
-<Content2 ></Content2>
-
-
+  <div id="app">
+  <h1>Hello App!</h1>
+  <p>
+    <!--使用 router-link 组件进行导航 -->
+    <!--通过传递 `to` 来指定链接 -->
+    <!--`<router-link>` 将呈现一个带有正确 `href` 属性的 `<a>` 标签-->
+    <router-link to="/">Go to Home</router-link>
+    <router-link to="/about">Go to About</router-link>
+  </p>
+  <!-- 路由出口 -->
+  <!-- 路由匹配到的组件将渲染在这里 -->
+  <router-view></router-view>
+</div>  
 </template>
-<style>
-
-
-
-
-</style>

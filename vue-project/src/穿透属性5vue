@@ -1,0 +1,22 @@
+<script>
+import { def } from '@vue/shared';
+import Hello5 from './components/Hello5.vue'
+
+export default{
+    data (){
+        return{
+
+        }
+    },
+    components:{Hello5}
+}
+</script>
+<template>
+    <Hello5 class="large"></Hello5>
+    <span>Fallthrough attribute: {{ $attrs}}</span>
+</template>
+<style>
+.large{
+    font-size: 20px;
+}
+</style>

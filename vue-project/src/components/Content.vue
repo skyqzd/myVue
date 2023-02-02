@@ -1,6 +1,6 @@
 <template>
     <div>
-       <!--  带有名称的可复用实例 -->
+    
         <Hello :message="msg"  :qq="list"></Hello>
         <h2>我是content组件内容</h2>
         <h2>{{ msg }}</h2>

@@ -24,7 +24,7 @@ export default {
 
 <div>
     <ul>
-        <li v-for="item in person" :key="ietm">{{item}}</li>
+        <li v-for="item in person" :key="item">{{item}}</li>
     </ul> 
 
     <!-- 使用of也可以 -->
